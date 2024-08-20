@@ -17,18 +17,12 @@ window.onload = function() {
     "while I was praying"
   ];
   function generateExcuse() {
-    let randomwho = Math.floor(Math.random() * who.length);
-    let randomaction = Math.floor(Math.random() * action.length);
-    let randomwhat = Math.floor(Math.random() * what.length);
-    let randomwhen = Math.floor(Math.random() * when.length);
-    let excuse =
-      who[randomwho] +
-      " " +
-      action[randomaction] +
-      " " +
-      what[randomwhat] +
-      " " +
-      when[randomwhen];
+    let randomWho = Math.floor(Math.random() * who.length);
+    let randomAction = Math.floor(Math.random() * action.length);
+    let randomWhat = Math.floor(Math.random() * what.length);
+    let randomWhen = Math.floor(Math.random() * when.length);
+    let excuse = `${randomWho} ${randomAction} ${randomWhat} ${randomWhen}`
+   
     return excuse;
   }
   document.getElementById("excuse").innerHTML = generateExcuse();
